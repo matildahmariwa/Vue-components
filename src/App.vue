@@ -1,28 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+<recipes v-bind:recipes="recipes"></recipes>
+
+    <recipes v-bind:recipes="recipes"></recipes>
+    <recipes v-bind:recipes="recipes"></recipes>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import recipes from './components/recipes';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    recipes
+  },
+  data(){
+    return{
+     recipes:[
+       {
+         id:1,
+         title:"chips masala",
+         content:"slice"
+
+       },
+       {
+         id:2,
+         title:"chapati",
+         content:"slice"
+
+       },
+     ]
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
