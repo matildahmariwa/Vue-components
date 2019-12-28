@@ -1,37 +1,43 @@
 <template>
-  <div id="app">
-
+  <div id="app" :style="{ fontSize: postFontSize + 'em' }">
+    <heading></heading>
 <recipes v-bind:recipes="recipes"></recipes>
 
-    <recipes v-bind:recipes="recipes"></recipes>
-    <recipes v-bind:recipes="recipes"></recipes>
+
   </div>
 </template>
 
 <script>
 import recipes from './components/recipes';
+import heading from './components/heading'
+
 
 export default {
   name: 'app',
   components: {
-    recipes
+    recipes,
+    heading,
+
   },
+
   data(){
     return{
      recipes:[
        {
          id:1,
-         title:"chips masala",
-         content:"slice"
+         name:"chips masala",
+         content:"slice potatoes and fry"
 
        },
        {
          id:2,
-         title:"chapati",
-         content:"slice"
+         name:"chapati",
+         content:"mix flour and roll into circles"
 
        },
-     ]
+
+     ],
+      postFontSize: 1
     }
   }
 }
