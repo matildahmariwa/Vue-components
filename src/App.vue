@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :style="{ fontSize: postFontSize + 'em' }">
+  <div id="app">
     <heading></heading>
 <recipes v-bind:recipes="recipes"></recipes>
 
@@ -26,18 +26,19 @@ export default {
        {
          id:1,
          name:"chips masala",
-         content:"slice potatoes and fry"
+         content:"slice potatoes and fry",
+
 
        },
        {
          id:2,
          name:"chapati",
-         content:"mix flour and roll into circles"
+         content:"mix flour and roll into circles",
 
        },
 
      ],
-      postFontSize: 1
+
     }
   }
 }

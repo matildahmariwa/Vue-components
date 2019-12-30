@@ -2,10 +2,11 @@
     <div>
 
       <h2>{{recipe.name}} <br>
-          {{recipe.content}}
+          {{recipe.content}} <br>
+
       </h2>
-        <button  v-on:click="$emit('enlarge-text')">
-            Enlarge text
+        <button  v-on:click="$emit('reduce-text')">
+           Reduce text
         </button>
 
         <hr>
